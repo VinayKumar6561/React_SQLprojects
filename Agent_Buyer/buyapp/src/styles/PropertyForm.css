@@ -1,0 +1,114 @@
+/* 📌 Form Container */
+.property-form-container {
+  width: 420px;
+  margin: 50px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Soft gradient */
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.property-form-container:hover {
+  transform: scale(1.02);
+}
+
+/* 📌 Form Title */
+.form-title {
+  color: #007bff;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* 📌 Form Styling */
+.property-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 📌 Input Fields */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #d5d6d8ec; /* Light gray background */
+  border-radius: 8px;
+  padding: 12px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.input-group:hover {
+  border-color: #007bff;
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.input-icon {
+  font-size: 18px;
+  color: #007bff;
+  margin-right: 12px;
+}
+
+.property-form input,
+.property-form textarea {
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  padding: 10px;
+  color: #333;
+}
+
+.property-form textarea {
+  resize: none; /* Prevents resizing */
+  height: 80px;
+  padding: 12px;
+}
+
+/* 📌 Placeholder Styling */
+.property-form input::placeholder,
+.property-form textarea::placeholder {
+  color: #555; /* Darker placeholder text */
+  font-style: italic;
+}
+
+/* 📌 Submit Button */
+.submit-button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #0056b3, #004494);
+  box-shadow: 0px 4px 12px rgba(0, 86, 179, 0.5);
+  transform: translateY(-3px);
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 480px) {
+  .property-form-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .input-group {
+    padding: 10px;
+  }
+
+  .submit-button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}

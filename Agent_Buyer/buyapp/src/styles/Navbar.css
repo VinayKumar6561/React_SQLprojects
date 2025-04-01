@@ -1,0 +1,119 @@
+/* 📌 Navbar Container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(34, 47, 62, 0.7); /* Modern dark shade */
+  color: white;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  height: 65px;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar:hover {
+  background: rgba(22, 32, 45, 0.8);
+}
+
+/* 📌 Brand Logo */
+.logo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 📌 Navbar Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* 🔹 Register & Login Buttons */
+.nav-button {
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  border: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(122deg, #424952, #7ac25d);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 98, 204, 0.3);
+}
+
+.nav-button:hover {
+  background: linear-gradient(45deg, #424952, #7ac25d);
+  box-shadow: 0px 4px 12px rgba(0, 86, 179, 0.5);
+  transform: translateY(-2px);
+}
+
+/* 🔥 Logout Button */
+.logout {
+  background: linear-gradient(135deg, #ff4d4d, #c80000);
+  color: white;
+  box-shadow: 0px 4px 10px rgba(200, 0, 0, 0.3);
+}
+
+.logout:hover {
+  background: linear-gradient(135deg, #d43b3b, #a60000);
+  box-shadow: 0px 4px 12px rgba(200, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* 🏠 Home Button */
+.home-btn {
+  background: linear-gradient(135deg, #505c48, #28057a);
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.home-btn:hover {
+  background: white;
+  color: #333;
+}
+
+.home-icon {
+  font-size: 18px;
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 10px 20px;
+      height: 60px;
+  }
+
+  .logo {
+      font-size: 1.5rem;
+  }
+
+  .nav-buttons {
+      gap: 8px;
+  }
+
+  .nav-button {
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+
+  .home-btn {
+      padding: 8px 16px;
+  }
+}
+
+/* Prevent content from overlapping navbar */
+.content {
+  margin-top: 80px;
+}

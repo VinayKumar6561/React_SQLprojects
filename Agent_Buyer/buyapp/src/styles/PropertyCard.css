@@ -1,0 +1,104 @@
+/* Page Styling */
+.property-section {
+  text-align: center;
+  /* padding-top: 80px;  */
+  margin: 20px;
+}
+
+/* Title */
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* No Properties Message */
+.no-properties {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Container for property cards */
+.property-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Individual property card */
+.property-card {
+  width: 320px;
+  background: #ffffff;
+  
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.property-card:hover {
+  transform: scale(1.05);
+}
+
+/* Property Image */
+.property-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Property Content */
+.property-content {
+  padding: 15px;
+  text-align: left;
+}
+
+/* Property Title */
+.property-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Property Description - Now Wrapping Properly */
+.property-desc {
+  font-size: 1rem;
+  color: #555;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* Property Price */
+.property-price {
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+/* Property Owner */
+.property-owner {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Property Contact */
+.property-contact {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,132 @@
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.home-container {
+    min-width: 60%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+    transition: background 0.6s ease-in-out;
+
+    /* 🎨 Animated Gradient Background */
+    background: linear-gradient(135deg, #444343, #0a3d46, #6c7e06);
+    background-size: 300% 300%;
+    animation: gradientAnimation 6s infinite alternate ease-in-out;
+}
+
+/* ✅ Headline Styling */
+.home-title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Subtext */
+.home-subtext {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Buttons */
+.home-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.home-btn {
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.6s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+/* ✅ Dark green button */
+.home-btn.primary {
+    background: #6c7e06;
+    color: white;
+}
+
+.home-btn.primary:hover {
+    background: #556304;
+}
+
+/* ✅ Transparent button */
+.home-btn.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.home-btn.secondary:hover {
+    background: white;
+    color: #333;
+}
+
+/* ✅ Fully Responsive Design */
+@media (max-width: 1024px) {
+    .home-container {
+        width: 80%;
+        min-height: 250px;
+        padding: 25px;
+    }
+
+    .home-title {
+        font-size: 2.8rem;
+    }
+
+    .home-subtext {
+        font-size: 1.1rem;
+    }
+
+    .home-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .home-title {
+        font-size: 2.5rem;
+    }
+
+    .home-subtext {
+        font-size: 1rem;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-btn {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}

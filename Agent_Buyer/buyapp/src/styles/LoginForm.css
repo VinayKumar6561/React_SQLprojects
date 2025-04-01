@@ -1,0 +1,113 @@
+/* Center login form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Form Box with Glassmorphism Effect */
+.login-box {
+  width: 400px;
+  padding: 25px;
+  background: rgb(46, 44, 40); /* Original background color */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Login Title */
+.login-title {
+  color: white;
+}
+
+/* Input fields */
+.login-input-group {
+  display: flex;
+  align-items: center;
+  background: rgba(8, 5, 3, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  max-height: 100px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Icons inside inputs */
+.login-icon {
+  color: white;
+  margin-right: 10px;
+}
+
+/* Input fields */
+.login-input-group input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  color: white;
+}
+
+.login-input-group input::placeholder {
+  color: rgba(242, 243, 235, 0.9); /* Light White */
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Login button - Updated Gradient */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #756a5d, #160b03); /* Original warm brown gradient */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.login-button:hover {
+  background: linear-gradient(to left, #756a5d, #160b03);
+}
+
+/* Error Message */
+.login-error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Register Text */
+.login-register-text {
+  color: white;
+  margin-top: 15px;
+}
+
+/* Register Link */
+.login-register-link {
+  color: #d8a24a; /* Warm Golden Brown */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.login-register-link:hover {
+  color: #f5c173; /* Lighter gold */
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .login-box {
+    width: 90%;
+    padding: 20px;
+  }
+}
