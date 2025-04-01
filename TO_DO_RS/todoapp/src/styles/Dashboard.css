@@ -1,0 +1,229 @@
+/* General Styles */
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-image: url('../assets/image_copy.png');
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+ 
+}
+#title-todo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Soft shadow */
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase; /* Makes it stylish */
+  padding: 10px 20px;
+  background: linear-gradient(to right, #0e5bb3, #a4a5b4); /* Green gradient */
+  border-radius: 10px;
+  display: inline-block;
+}
+
+
+/* Task Form */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 10px;
+  transition: transform 0.7s ease, box-shadow 0.3s ease;
+  
+}
+
+.task-form:hover {
+  transform: scale(1.1); /* Slight hover zoom effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0);
+}
+.task-form input,
+.task-form select {
+  width: 90%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.task-form button {
+  width: 90%;
+  max-width: 400px;
+  background: linear-gradient(to right, #613417, #0a434d); 
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.8s ease;
+}
+
+.task-form button:hover {
+  background: linear-gradient(to left, #613417, #0a434d); 
+}
+
+/* Task List */
+.task-list {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: #f8f9fa;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+  flex-wrap: wrap;  /* Ensures items wrap properly */
+}
+
+.task-item:hover {
+  transform: translateY(-3px);
+}
+
+/* Ensure the task name doesn't push buttons outside */
+.task-item span {
+  flex: 1;  
+  text-align: center;
+  font-size: 16px;
+  max-width: 60%; /* Limits text width */
+  word-wrap: break-word; /* Ensures text wraps */
+  overflow-wrap: break-word;
+  white-space: normal; /* Allows text to wrap */
+}
+#task_name{
+  max-width: 170px;
+  margin-right:10px;
+}
+/* Task Status */
+.completed {
+  color: green;
+  font-weight: bold;
+}
+
+.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Task Buttons */
+/* Ensure buttons stay inside */
+.task-item button {
+  flex-shrink: 0; /* Prevents buttons from shrinking */
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 0 8px;
+}
+
+.task-item button:hover {
+  transform: scale(1.05);
+}
+
+.task-item .edit-btn {
+  background: linear-gradient(to right, #0b130d, #138129); /* Green gradient */
+  color: white;
+}
+
+.task-item .edit-btn:hover {
+  background: linear-gradient(to left, #0b130d, #138129);
+}
+
+.task-item .delete-btn {
+  background: linear-gradient(to right, #201774, #a37010); 
+  color: white;
+}
+
+.task-item .delete-btn:hover {
+  background: linear-gradient(to left, #201774, #a37010);  
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-list {
+    max-width: 80%; /* Make task list more flexible */
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .task-item span {
+    max-width: 100%;
+    margin: 3px;
+    word-wrap: break-word;
+  }
+
+  .task-item button {
+    width: 70%;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .task-form input,
+  .task-form select,
+  .task-form button {
+    max-width: 100%; /* Make form elements full-width */
+  }
+
+  .task-item {
+    padding: 10px;
+  }
+
+  #task_name {
+    max-width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .task-form input,
+  .task-form select,
+  .task-form button {
+    font-size: 14px; /* Adjust font size for small screens */
+ 
+    padding: 8px;
+  }
+
+  .task-item {
+    padding: 8px;
+       margin: 4px;
+  }
+
+  .task-item button {
+    font-size: 14px;
+    
+  }
+}

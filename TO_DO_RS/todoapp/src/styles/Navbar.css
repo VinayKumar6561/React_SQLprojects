@@ -1,0 +1,98 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #88294d, #294679); 
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  
+  /* Gradient Animation */
+  background-size: 300% 300%;
+  animation: animateBackground 8s ease infinite;
+}
+#t-nav
+{
+color:rgb(255, 246, 249);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+
+.nav-btn, .logout-btn {
+  background: linear-gradient(135deg, #b91856, #2575fc); 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  background-size: 200% auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Hover Effect */
+.nav-btn:hover, .logout-btn:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.07);
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.logout-btn {
+  background: linear-gradient(to right, #03383a, #04ccf0); 
+  height: 37px;
+  font-size: 16px;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(to left, #03383a, #04ccf0); 
+}
+
+/* Responsive Navbar */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-btn, .logout-btn {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+/* Keyframes for Smooth Background Animation */
+@keyframes animateBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

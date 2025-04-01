@@ -1,0 +1,135 @@
+.auth-container-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures full height */
+  padding: 20px;
+  background-image: url('../assets/image.png'); /* Replace with actual path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps background fixed */
+  overflow: hidden;
+}
+
+/* Form box styling */
+.auth-box-register{
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency for better visibility */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  position: relative;
+}
+
+/* User Logo Above Form */
+.user-logo {
+  font-size: 60px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* Input Fields */
+.input-container {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+}
+
+.input-icon {
+  margin-right: 10px;
+  color: #555;
+}
+
+.input-container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+}
+
+/* Buttons */
+.auth-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-box button:hover {
+  background-color: #0056b3;
+}
+
+/* Links */
+.auth-box p {
+  margin-top: 15px;
+}
+
+.auth-box a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.auth-box a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-height: 600px) {
+  .auth-container {
+    align-items: flex-start; /* Push form to top when height is small */
+    padding-top: 50px;
+    overflow-y: auto; /* Allows scrolling if necessary */
+  }
+
+  .auth-box {
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+  }
+}
+
+@media (max-height: 500px) {
+  .auth-container {
+    align-items: flex-start;
+    padding-top: 20px;
+    overflow-y: auto;
+  }
+
+  .auth-box {
+    padding: 15px;
+    width: 95%;
+    max-width: 350px;
+  }
+
+  .user-logo {
+    font-size: 50px;
+  }
+
+  .input-container {
+    padding: 7px;
+  }
+
+  .input-container input {
+    font-size: 14px;
+  }
+
+  .auth-box button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .auth-box p {
+    font-size: 14px;
+  }
+}
